@@ -1,0 +1,73 @@
+name: Build Android APK
+
+# Trigger the workflow
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Step 1: Checkout the code
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    # Step 2: Setup Java 17
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        
+    # Step 3: Setup Android SDK
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      
+    # Step 4: Cache Gradle dependencies (speeds up builds)
+    - name: Cache Gradle packages
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
+    # Step 5: Make gradlew executable
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+      
+    # Step 6: Clean build
+    - name: Clean project
+      run: ./gradlew clean
+        
+    # Step 7: Build debug APK
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+        
+    # Step 8: Build release APK (unsigned)
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
+        
+    # Step 9: Upload Debug APK as artifact
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: panda-task-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+        retention-days: 30
+        
+    # Step 10: Upload Release APK as artifact
+    - name: Upload Release APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: panda-task-release
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
+        retention-days: 30

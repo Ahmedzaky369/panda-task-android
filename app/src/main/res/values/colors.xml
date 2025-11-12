@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors - matching PWA design -->
+    <color name="panda_green">#50C878</color>
+    <color name="panda_green_light">#66BB6A</color>
+    <color name="panda_green_dark">#4CAF50</color>
+    <color name="panda_green_variant">#81C784</color>
+    
+    <!-- Dark theme colors - matching PWA neutral colors -->
+    <color name="dark_background">#0A0A0A</color>
+    <color name="dark_surface">#171717</color>
+    <color name="dark_surface_variant">#262626</color>
+    <color name="dark_outline">#404040</color>
+    
+    <!-- Text colors -->
+    <color name="dark_on_background">#FFFFFF</color>
+    <color name="dark_on_surface">#E5E5E5</color>
+    <color name="dark_on_surface_variant">#A3A3A3</color>
+    
+    <!-- Standard colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Functional colors -->
+    <color name="error_color">#DC2626</color>
+    <color name="success_color">#50C878</color>
+    <color name="warning_color">#F59E0B</color>
+    
+    <!-- Selection colors -->
+    <color name="selection_background">#1A50C878</color>
+    <color name="selection_border">#8050C878</color>
+</resources>

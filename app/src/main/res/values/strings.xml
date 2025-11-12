@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Panda Task</string>
+    
+    <!-- Navigation -->
+    <string name="nav_today">Today</string>
+    <string name="nav_all_tasks">All Tasks</string>
+    <string name="nav_plan">Plan</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Screen titles -->
+    <string name="title_today">Today</string>
+    <string name="title_all_tasks">All Tasks</string>
+    <string name="title_plan">Plan</string>
+    <string name="title_settings">Settings</string>
+    
+    <!-- Subtitles -->
+    <string name="subtitle_today">Focus on what matters</string>
+    <string name="subtitle_all_tasks">Organize your life</string>
+    <string name="subtitle_plan">Your goals, your way</string>
+    <string name="subtitle_settings">Customize your experience</string>
+    
+    <!-- Common actions -->
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_done">Done</string>
+    
+    <!-- Task actions -->
+    <string name="action_add_task">Add Task</string>
+    <string name="action_add_to_today">Add to Today</string>
+    <string name="action_remove_from_today">Remove from Today</string>
+    <string name="action_mark_complete">Mark complete</string>
+    <string name="action_mark_incomplete">Mark incomplete</string>
+    
+    <!-- Goal actions -->
+    <string name="action_add_weekly_goal">Add Weekly Goal</string>
+    <string name="action_add_monthly_goal">Add Monthly Goal</string>
+    
+    <!-- Category actions -->
+    <string name="action_manage_categories">Manage categories</string>
+    <string name="action_add_category">Add Category</string>
+    
+    <!-- Settings -->
+    <string name="settings_sound_title">Sound</string>
+    <string name="settings_sound_description">Enable sound effects</string>
+    <string name="settings_about_title">About</string>
+    <string name="settings_danger_title">Danger Zone</string>
+    <string name="settings_reset_data">Reset All Data</string>
+    <string name="settings_reset_description">Reset the app to its initial state. This will delete all your data permanently.</string>
+    
+    <!-- Empty states -->
+    <string name="empty_today">What\'s your vibe today?</string>
+    <string name="empty_tasks">No tasks yet</string>
+    <string name="empty_goals">No goals yet</string>
+    
+    <!-- Progress -->
+    <string name="progress_format">%1$d / %2$d</string>
+    <string name="section_finished">finished</string>
+    
+    <!-- Goals -->
+    <string name="goals_weekly">Weekly Goals</string>
+    <string name="goals_monthly">Monthly Goals</string>
+    
+    <!-- About -->
+    <string name="about_version">Panda Task v2.0</string>
+    <string name="about_description">A calm, minimalist task manager</string>
+    <string name="about_tagline">Quiet digital garden</string>
+    <string name="about_storage">Data stored locally with Room database</string>
+    
+    <!-- Content descriptions -->
+    <string name="cd_drag_handle">Drag handle</string>
+    <string name="cd_notes">Notes</string>
+    <string name="cd_add">Add</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_expand">Expand</string>
+    <string name="cd_collapse">Collapse</string>
+</resources>
